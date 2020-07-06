@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Clothe;
 
 class ClothesController extends Controller
 {
     public function index() {
-      return view('welcome');
+      $list_clothes = Clothe::all();
+      dd($list_clothes);
     }
 }
