@@ -9,6 +9,6 @@ class ClothesController extends Controller
 {
     public function index() {
       $list_clothes = Clothe::all();
-      dd($list_clothes);
+      return view('welcome' , ['clothes' => $list_clothes]);
     }
 }

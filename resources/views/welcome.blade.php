@@ -7,6 +7,17 @@
     <title>@yield('page_title')</title>
   </head>
   <body>
-    <h1>HELLO</h1>
+    <ul>
+      @foreach ($clothes as $key => $clothe)
+        <p>{{ $clothe -> id }}</p>
+        <ul>
+          <li>{{ $clothe -> type }}</li>
+          <li>{{ $clothe -> mesure }}</li>
+          <li>{{ $clothe -> color }}</li>
+          <li>{{ $clothe -> price }}</li>
+          <li>{{ $clothe -> sold_out }}</li>
+        </ul>
+      @endforeach
+    </ul>
   </body>
 </html>
